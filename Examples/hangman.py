@@ -36,7 +36,7 @@ def print_status(incorrect_letters, attempts_left):
     print(f'Incorrect letters: {", ".join(incorrect_letters)}')
     print(f'Attempts left: {attempts_left}')
 
-def print_win_message(chosen_word):
+def print_win_message(chosen_word,correct_letters):
     display_board(chosen_word, correct_letters)
     print("Congratulations, you found the word!")
 
@@ -57,12 +57,12 @@ def play_game():
         
         if update_game_state(letter, chosen_word, correct_letters, incorrect_letters):
             if len(correct_letters) == unique_letter_count:
-                print_win_message(chosen_word)
+                print_win_message(chosen_word,correct_letters)
                 break
         else:
             attempts_left -= 1
             if attempts_left == 0:
-                print_lose_message(chosen_word)
+                print_lose_message(chosen_word,correct_letters)
                 break
 
 if __name__ == "__main__":
