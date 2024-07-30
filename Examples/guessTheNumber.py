@@ -3,9 +3,9 @@ from random import randint
 attempts = 0
 getNumber = 0
 secret_number = randint(1,100)
-name = input("Dime tu nombre: ")
+name = input("What's your name: ")
 
-print(f"Hi {name}, i just thinking in a number between 1 and 100\nYou can try 8 times and guess the number")
+print(f"Hi {name}, I'm thinking in a number between 1 and 100\nYou can try 8 times and guess the number")
 
 while attempts < 8:
     getNumber = int(input("Whats the number?: "))
